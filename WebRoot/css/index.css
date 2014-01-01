@@ -1,0 +1,74 @@
+/* CSS Document */
+
+/*************************************/
+/**				首页样式				**/
+/*************************************/
+
+
+/**start		wrapper				**/
+#wrapper div{
+	float:left;
+}
+
+#search {
+	height:38px;
+	width:inherit;
+	background:#E9E9E9;
+}
+
+#news {
+	margin-top:10px;
+}
+.news_tab {
+	width:496px;
+	height:260px;
+	border:1px solid #C6C6C6;
+	margin-bottom:6px;
+}
+.news_tableft {
+	margin-right:4px;
+}
+.news_tab span {
+	font-size:14px;
+	font-weight:bold;
+	background:url(../images/newsTab.png);
+	line-height:25px;
+	display:block;
+	float:left;
+	width:248px;
+	height:23px;
+	text-align:center;
+}
+.news_tab .news_tab_select {
+	background:#fff;
+	height:23px;
+	border-top:2px solid #074892;
+}
+/**end		wrapper				**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

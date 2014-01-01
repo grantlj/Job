@@ -1,0 +1,40 @@
+/*
+#fileuploadUploader{
+	diaplay:block;
+	float:left;
+}
+*/
+.uploadifyQueueItem {
+	background-color: #F5F5F5;
+	padding:2px;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 2px;
+	margin-left:2px;
+	overflow:hidden;
+	float:left;
+	display:block;
+	border:1px solid rgb(224, 236, 255);
+}
+.uploadifyError {
+	background-color: #FDE5DD !important;
+	border: 2px solid #FBCBBC !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyQueue .completed {
+	background-color:  rgb(224, 236, 255);
+	width: 150px;
+	height:30px;
+	
+}
+.uploadifyProgress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}

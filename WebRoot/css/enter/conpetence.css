@@ -1,0 +1,19 @@
+﻿#talentsDistribution {
+	  	width: 770px;
+	  	height: 500px;
+	  }
+	  span {
+	  	width: 770px;
+	  	height: 50px;
+	    	text-align: center;
+	  	font-size: 23px;
+	  	font-weight: bold;
+	  	line-height: 50px;
+	  }
+	  #header {
+	  	width: 750px;
+	  	text-align: center;
+	  }
+	  #header, tr, td {
+	  	border: 1px solid #000;
+	  }

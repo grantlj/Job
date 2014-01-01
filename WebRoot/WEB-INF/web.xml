@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
+    version="2.5">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personMsgDo</servlet-name>
+    <servlet-class>com.job.person.personMsgDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personBasicInfoDo</servlet-name>
+    <servlet-class>com.job.person.personBasicInfoDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personCertDo</servlet-name>
+    <servlet-class>com.job.person.personCertDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personLoginDo</servlet-name>
+    <servlet-class>com.job.person.personLoginDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personJobRecommendDo</servlet-name>
+    <servlet-class>com.job.person.personJobRecommendDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personExpDo</servlet-name>
+    <servlet-class>com.job.person.personExpDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personChangePwdDo</servlet-name>
+    <servlet-class>com.job.person.personChangePwdDo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>personHistoryDo</servlet-name>
+    <servlet-class>com.job.person.personHistoryDo</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>personMsgDo</servlet-name>
+    <url-pattern>/views/person/personMsgDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personBasicInfoDo</servlet-name>
+    <url-pattern>/views/person/personBasicInfoDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personCertDo</servlet-name>
+    <url-pattern>/views/person/personCertDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personLoginDo</servlet-name>
+    <url-pattern>/views/person/personLoginDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personJobRecommendDo</servlet-name>
+    <url-pattern>/views/person/personJobRecommendDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personExpDo</servlet-name>
+    <url-pattern>/views/person/personExpDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personChangePwdDo</servlet-name>
+    <url-pattern>/views/person/personChangePwdDo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>personHistoryDo</servlet-name>
+    <url-pattern>/views/person/personHistoryDo</url-pattern>
+  </servlet-mapping>
+
+
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+ 
+</web-app>

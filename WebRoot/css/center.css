@@ -1,0 +1,72 @@
+/* CSS Document */
+
+#wrapper div{
+	float:left;
+}
+#subnav {
+	width:180px;
+	margin-right:50px;
+	font-size:14px;
+}
+#subnav a{
+	text-decoration:none;
+	color:#004979;
+}
+#subnav li:hover{
+	background:#004979;
+	color:#fff;
+}
+#subnav .select{
+	background:#004979;
+	color:#fff;
+}
+#subnav span{
+	display:block;
+	height:55px;
+	border-bottom:#09F 1px solid;
+}
+#subnav ul{
+	*position:relative;
+	*top:-32px;
+}
+#subnav li{
+	padding-left:20px;
+	height:32px;
+	border-bottom:#09F 1px solid;
+	line-height:34px;
+	vertical-align:middle;
+	_height:22px;
+	_padding-top:10px;
+}
+#subnav li img {
+	margin-right:10px;
+}
+
+#content {
+	width:770px;
+	min-height:400px;
+}
+
+#content span {
+	border-bottom:#09F 1px solid;
+	display:block;
+	padding-top:20px;
+	margin-bottom:30px;
+	height:35px;
+	line-height:35px;
+	font-weight:bolder;
+	font-size:18px;
+	color:#004979;
+	padding-left:40px;
+	vertical-align:bottom;
+}
+
+
+
+
+
+
+
+
+
+

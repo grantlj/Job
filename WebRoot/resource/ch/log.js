@@ -1,0 +1,10 @@
+var LOG_TIME="操作时间";
+var OPERATOR="操作人员";
+var SYSTEM = "系统";
+var OPERATMODULE="操作模块";
+var OPERATE="操作";
+var OPERATCONENTS="操作内容";
+var OPERATIP="操作IP";
+var log_title="queryDate:"+LOG_TIME+",appid:"+SYSTEM+",czry:"+OPERATOR+",mkname:"+OPERATMODULE+",funcname:"+OPERATE+",ryzt:"+OPERATCONENTS+",ipaddress:"+OPERATIP;
+var log_list=[];
+log_list.push(LOG_TIME,SYSTEM,OPERATOR,OPERATMODULE,OPERATE,OPERATIP,OPERATCONENTS);

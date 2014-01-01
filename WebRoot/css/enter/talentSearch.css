@@ -1,0 +1,48 @@
+body,div{
+margin:0;
+padding:0;
+   
+    color:#000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+td{
+text-align:center;
+width:118px;
+height:30px;
+}
+
+a {
+	color:#014979;
+	text-decoration:none;
+	
+}
+
+a:hover {
+	color:#FE9900;
+	text-decoration:underline;
+}
+
+#table{
+width:770px;
+}
+
+
+#first_line td{
+border:solid 1px;
+
+
+}
+
+.even_line {
+
+background:#E6F1F5;
+}
+
+.odd_line{
+
+background:#F7FBFC;
+}
+

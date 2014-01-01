@@ -1,0 +1,27 @@
+/**start			header				**/
+#header {
+	height:68px;
+	width:1000px;
+	margin:0 auto;
+}
+
+/**start		wrapper			**/
+#wrapper{
+	width:1000px;
+	margin:10px auto 0;
+	overflow:hidden;
+}
+
+/**end		footer			**/
+#footer{
+	width:1000px;
+	height:200px;
+	background:#014979;
+	margin:10px auto 0;
+}
+
+
+.iframepage{
+	width:730px;
+	margin-left:40px;
+}
