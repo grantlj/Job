@@ -5,26 +5,24 @@
 <title>首页</title>
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/index/reset.css"/>
-<link rel="stylesheet" type="text/css" href="css/index/index.css"/>
 <link rel="stylesheet" type="text/css" href="css/index/base.css"/>
 <link rel="stylesheet" type="text/css" href="css/index/module.css"/>
-<script type="text/javascript" src="js/index/jquery-1.4.2.js"></script>
-<script type="text/javascript" src="js/index/slider.js"></script>
-<link href="css/index/slide.css"  rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/index/index.css"/>
+<link rel="stylesheet" type="text/css" href="css/index/layout.css"/>
 </head>
 
 <body>
 <!--start			header部分			-->
 <div id="header">
 	<div id="logo">
-    	<img src="images/logo.jpg" alt="logo" />
+    	<img src="images/logo.png" alt="logo" />
     </div>
-    <div id="topnav">
+    <div class="topnav">
     	<a href="views/person/center.jsp" target="_blank">个人中心</a>
         <a href="#" target="_blank">企业中心</a>
         <a href="#" target="_blank">管理中心</a>
-        <a href="#" target="_blank">网站导航</a>
     </div>
+    <div class="topnav topnavRight"><a href="#" target="_blank">网站导航</a></div>
 </div>
 <!--end			header部分			-->
 <div id="nav">
@@ -35,6 +33,8 @@
         </div>
         <div id="nav_menu">
         	<ul>
+            	<li class="nav_menu"><a href="#">找工作</a></li>
+                <li class="nav_menu"><a href="#">找人才</a></li>
             	<li class="nav_menu"><a href="#">软件园地</a></li>
                 <li class="nav_menu"><a href="#">自主学习</a></li>
                 <li class="nav_menu"><a href="#">在线评测</a></li>
@@ -45,9 +45,40 @@
     </div>
 </div>
 
-<!--start			header部分			-->
-<div id="wrapper"></div>
-<!--end			header部分			-->
+<!--start			wrapper部分			-->
+<!--<div id="wrapper">
+  <div id="search"></div>
+  <div id="login"></div>
+  <div id="advertise"></div>
+  
+  <div id="news">
+      <div class="news_tab news_tableft">
+          <span class="news_tab_select">招聘信息</span>
+            <span>现场招聘信息</span>
+            <div>
+            	
+            </div>
+            <div></div>
+        </div>
+        <div class="news_tab">
+        	<span>新闻</span>
+            <span>行业动态信息</span>
+            <div></div>
+            <div></div>
+        </div>
+       <div class="news_tab news_tableft">
+        	<span>求职信息</span>
+            <span>法律法规</span>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    <div id="advertise2"></div>
+    <div id="recommented"></div>
+    <div id="hot"></div>
+</div> -->
+<!--end			wrapper部分			-->
 
 <!--start			container部分			-->
 <div id="container">
@@ -59,37 +90,14 @@
                   <li><a>单位</a></li>
                </ul>
                <form method="post">
-                    用户名&nbsp;<input style="height:25px;_height:20px; width:155px;" id="user_name" type="text"onfocus="if(value=='用户名/邮箱/手机号') {value=''}" onblur="if (value=='') {value='用户名/邮箱/手机号'}" /> 
-                    密&nbsp;码&nbsp;<input style="height:25px;_height:20px; width:155px;" id="user_name" type="password" />
+                    用户名&nbsp;<input style="height:20px;_height:20px; width:155px;" id="user_name" type="text"/> 
+                    密&nbsp;码&nbsp;<input style="height:20px;_height:20px; width:155px;" id="user_name" type="password" />
                     <input style="width:75px; height:26px;" type="submit" value="登录"/>
-                    <button style="width:75px;_height:26px;" type="button" value="注册" onclick="">注册</button>
+                    <input style="width:75px; height:26px;" type="button" value="注册"/>
                </form>
           </div>
           <div id="con_Top_2"><!--start                con_Top_2   -->
-               <div id="cTop_2_left">
-               
-                     
-                        <div class="content_right">
-                                <div class="ad" >
-                                          <ul class="slider" >
-                                            <li><a href="#"><img src="images/index/buttom_0.gif"/></a></li>
-                                            <li><a href="#"><img src="images/index/buttom_1.gif"/></a></li>
-                                            <li><a href="#"><img src="images/index/buttom_2.gif"/></a></li>
-                                            <li><a href="#"><img src="images/index/buttom_3.gif"/></a></li>
-                                          </ul>
-                                          
-                                          <ul class="num" >
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                          </ul>
-                                          <div class="close">x</div>
-                               </div>
-                            </div>
-          
-               
-               
+               <div id="cTop_2_left"> <!--焦点图-->
                </div>
                <div id="cTop_2_right">
                   <div class="cMid_info_title" style="margin-top:-2px;">
@@ -269,37 +277,44 @@
      </div><!--end                con_Bot   -->   
 </div>
 <!--end			container部分			-->
-<hr color="#135097" size="3px;">
 
-<div id="footer"><!--start              footer   -->
-     <h3>友情链接</h3>
-     <table>
-          <tr>
-              <td width="208px;"><a href="#" ><img src="images/index/cqupt_coin.gif"><p>重庆邮电大学</p></a></td>
-              <td width="208px;"><a href="#"><img src="images/index/xn_coin.gif"><p>西南大学</p></a></td>
-              <td width="208px;"><a href="#" ><img src="images/index/cqrc_coin.gif" /><p>重庆人才网</p></a></td>
-              <td width="208px;"><a href="#"><img src="images/index/hb_coin.gif"><p>汇博人才网</p></a></td>
-              <td width="208px;"><a href="#"><img src="images/index/cq_coin.gif"><p>重庆大学</p></a></td>
-          </tr>
-     </table>
-     <div style="clear:both"></div>
-           <div id="bottom">
-                 <p style="height:16px;">&nbsp;</p>
-                 <span>|&nbsp;<a href="#"  target="_blank">关于我们</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">联系我们</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">加入我们</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">收费标准</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">广告投放</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">网站地图</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">法律申明</a>
-                 &nbsp;|&nbsp;<a href="#"  target="_blank">隐私声明</a>
-                 &nbsp;|</span></br>       
-                <span style="margin-left:237px;">Copyright2005-1013&nbsp 重庆软件人才中心 &nbsp All Rights Reversed</span><br />
-                <span style="margin-left:237px;">隐私权政策 &nbsp 渝ICP证080054号</span>
-           </div>
-     </div>
 
-</div><!--end                footer         -->
+<!--start			footer部分			-->
+<hr style="height:4px; border:none; border-top:#135097 4px solid;" />
+<div id="footer">
+	<div id="link">
+    	<div class="link_title">友情链接</div>
+        <div class="link_tar">
+        	<ul>
+            	<li><a href="#" ><img src="images/index/cqupt_coin.gif"><span>重庆邮电大学</span></a></li>
+                <li><a href="#"><img src="images/index/xn_coin.gif"><span>西南大学</span></a></li>
+                <li><a href="#" ><img src="images/index/cqrc_coin.gif" /><span>重庆人才网</span></a></li>
+                <li><a href="#"><img src="images/index/hb_coin.gif"><span>汇博人才网</span></a></li>
+                <li><a href="#"><img src="images/index/cq_coin.gif"><span>重庆大学</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="copyright">
+    	<div class="copy_link">
+        	<a href="#"  target="_blank">关于我们</a>
+            <a href="#"  target="_blank">联系我们</a>
+            <a href="#"  target="_blank">加入我们</a>
+            <a href="#"  target="_blank">收费标准</a>
+            <a href="#"  target="_blank">广告投放</a>
+            <a href="#"  target="_blank">网站地图</a>
+            <a href="#"  target="_blank">法律申明</a>
+            <a href="#"  target="_blank">隐私声明</a>
+        </div>
+        <div class="copy_con">
+            重庆软件人才中心 &copy; All Rights Reversed <br />
+            隐私权政策 &nbsp 渝ICP证080054号
+        </div>
+        <div class="record">
+        	<img src="images/record.jpg" alt="record" />
+        </div>
+    </div>
+</div>
+<!--end			footer部分			-->
 
 
 </body>
