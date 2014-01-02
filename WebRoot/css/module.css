@@ -1,10 +1,6 @@
 
+
 /**start			header样式				**/
-#header {
-	height:68px;
-	width:1000px;
-	margin:0 auto;
-}
 #header div{
 	float:left;
 }

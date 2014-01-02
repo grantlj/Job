@@ -66,7 +66,7 @@
 						    	
 			 <a href="personCreditDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />个人能力信用查询</li>
 		     <a href="personCertDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />获得证书</li>
-			  <a href="personJobDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />工作查询</li>
+			  <a href="../search.html" target="_blank"><li>  <img src="../../images/subnav_icon.png" />工作查询</li>
 			 <a href="personJobRecommendDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />工作推荐查询</li>	
 						 
 			 <a href="personBasicInfoDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人基础资料</li>

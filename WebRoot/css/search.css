@@ -1,0 +1,273 @@
+/* CSS Document */
+
+#wrapper div{
+	float:left;
+}
+#subnav {
+	width:180px;
+	margin-right:50px;
+	font-size:14px;
+}
+#subnav a{
+	text-decoration:none;
+	color:#004979;
+}
+#subnav li:hover{
+	background:#004979;
+	color:#fff;
+}
+#subnav .select{
+	background:#004979;
+	color:#fff;
+}
+#subnav span{
+	display:block;
+	height:55px;
+	border-bottom:#09F 1px solid;
+}
+#subnav li{
+	padding-left:20px;
+	height:32px;
+	border-bottom:#09F 1px solid;
+	line-height:34px;
+}
+#subnav li img {
+	margin-right:10px;
+}
+
+#search-box {
+	width:990px;
+	margin:15px auto;
+}
+.clearFix {
+	clear:both;
+}
+a{text-decoration:none;color:#315aaa;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:underline;} 
+
+.Search-boxtop{
+	height:7px;
+	overflow:hidden;
+	background:url(../images/bg_sprites.png) 0 -100px no-repeat;
+}
+.Search-boxbottom{
+height:12px;
+overflow:hidden;
+background:url(../images/bg_sprites.png) 0 -112px no-repeat;
+}
+.search{
+background:url(../images/search_middlebg.png) top repeat-x #3f7dd5;
+border-left:1px solid #3e7cd4;
+border-right:1px solid #3e7cd4;
+}
+.funSearch{
+width:988px;
+}
+.searchForm {
+height:auto;
+font-size:12px;
+}
+.searchForm div{
+float:left;
+height:58px;
+width:290px;
+overflow:hidden;
+display:inline;
+font-size:12px;
+text-align:left;
+color:#fff;
+background:none;
+margin:10px 0px 0 30px;
+}
+.searchForm div input{
+font-size:12px;
+}
+.searchForm div span{
+line-height:30px;
+height:30px;
+display:block;
+color:#fff;
+}
+.searchForm div a{
+color:#fff;
+}
+.searchForm div a:hover,.searchForm div .keyword-tab a.current:hover{
+text-decoration:none;
+}
+.searchForm div .keyword-tab{
+color:#4572b3;
+}
+.searchForm div .keyword-tab a{
+display:inline-block;
+text-align:center;
+width:62px;
+height:27px;
+line-height:27px;
+margin-top:3px;
+}
+.searchForm div .keyword-tab a:hover{
+text-decoration:underline;
+}
+.searchForm div .keyword-tab a.current{
+background:url(../images/search_keywordtab.png) bottom no-repeat;
+}
+.searchForm .industry input,.searchForm .job input,
+.searchForm .workingtime input,.searchForm .degree input,
+.searchForm .comptype input,.searchForm .compsize input{
+width:256px;
+padding-left:25px;
+text-align:left;
+background:url(../images/botton_sprites.png) 0 0 no-repeat;
+width:290px;
+height:27px;
+overflow:hidden;
+line-height:26px;
+cursor:pointer;
+margin-left:0;
+}
+.searchForm .industry input:hover,.searchForm .job input:hover,
+.searchForm .workingtime input:hover,.searchForm .degree input:hover,
+.searchForm .comptype input:hover,.searchForm .compsize input:hover{
+background-position:0 -50px;
+}
+.searchForm .industry input:active,.searchForm .job input:active,
+.searchForm .workingtime input:active,.searchForm .degree input:active,
+.searchForm .comptype input:active,.searchForm .compsize input:active{
+background-position:0 -100px;
+}
+.searchForm .time select,.searchForm .Distance select{
+width:290px;
+padding:4px;
+height:27px;
+}
+.searchForm .keyword{
+width:610px;
+height:60px;
+background:none;
+}
+.searchForm .keyword input{
+background:url(../images/search_keyword.png) no-repeat;
+color:#999;
+height:19px;
+line-height:18px;
+width:595px;
+padding:4px 0 4px 15px;
+}
+#KeyWord_kw2{
+margin:0;
+}
+.searchForm .city2 input,.searchForm .markcity input,.searchForm .landmark input{
+width:215px;
+height:19px;
+line-height:18px;
+text-align:left;
+padding:4px 0 4px 10px;
+margin:0;
+background:url(../images/bg_sprites.png) 0 0 no-repeat;
+float:left;
+}
+.searchForm .city2 input:hover,
+.searchForm .markcity input:hover,
+.searchForm .landmark input:hover{
+background-position:0 0;
+}
+.searchForm .city2 .search-citybtn,
+.searchForm .markcity .search-citybtn,
+.searchForm .landmark .search-citybtn{
+background-position:-226px 0;
+width:65px;
+height:27px;
+margin-top:0;
+cursor:pointer;
+}
+.searchForm .city2 .search-citybtn:hover,
+.searchForm .markcity .search-citybtn:hover,
+.searchForm .landmark .search-citybtn:hover{
+background-position:-226px 0;
+}
+.searchForm .searchbtn{
+text-align:right;
+padding-right:20px;
+width:270px;
+}
+.searchForm .searchbtn .doesSearch{
+background:url(../images/botton_sprites.png) -300px -103px no-repeat;
+width:129px;
+height:34px;
+}
+.searchForm .searchbtn .doesSearch:hover{
+background-position:-300px -50px;
+}
+.searchForm .searchbtn .doesSearch:active{
+background-position:-300px 0px;
+}
+.searchForm .searchbtn a{
+margin-left:10px;
+}
+.searchForm .searchbtn a:hover{
+text-decoration:underline;
+}
+.searchForm .hot-keyword{
+width:930px;
+height:24px;
+line-height:24px;
+color:#406aa7;
+margin-top:0;
+}
+.searchForm .hot-keyword em{
+color:#c2dbfe;
+}
+.searchForm .hot-keyword a{
+margin:0 5px;
+}
+.searchForm .hot-keyword a:hover{
+text-decoration:underline;
+}
+.searchForm .Salary-range select{
+width:102px;
+padding:4px;
+height:27px;
+}
+.searchForm .job-category .category{
+line-height:27px;
+vertical-align:-2px;
+margin-right:30px;
+}
+.searchForm .job-category .category input{
+vertical-align:-2px;
+margin-right:5px;
+}
+.searchForm .returnback{
+width:930px;
+height:21px;
+padding-top:5px;
+text-align:right;
+margin-top:0;
+background:url(../images/returnback_bg.png) bottom repeat-x;
+}
+.searchForm .returnback:hover{
+background:url(../images/returnback_bg.png) bottom repeat-x;
+}
+.searchForm .returnback a{
+background:url(../images/returnback.png) left no-repeat;
+padding-left:18px;
+}
+.searchForm .slideUp a{
+background:url(../images/sligup.png) left center no-repeat;
+padding:6px 0 5px 22px;
+line-height:20px;
+}
+.searchForm .slideUp a .down{
+background:url(../images/sligdown.png) left center no-repeat;
+}
+.searchForm .slideUp,.searchForm .searchbtn{
+margin-top:15px;
+height:36px;
+}
+.searchForm #moreoption{
+margin:0;
+padding:0;
+width:988px;
+height:auto;
+}
