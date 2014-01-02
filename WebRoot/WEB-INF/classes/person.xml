@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <personList count="1"> 
+    <person ID="1"> 
+      <name>bob</name>  
+      <sex>1</sex>  
+      <birth_year>1994</birth_year>  
+      <birth_mon>04</birth_mon>  
+      <career_year>2001</career_year>  
+      <marriage>1</marriage>  
+      <country>china</country>  
+      <lisenceType>2</lisenceType>  
+      <lisenceId>331031314</lisenceId>  
+      <abroad>1</abroad>  
+      <political>3</political>  
+      <city_org>chongqing</city_org>  
+      <city_now>chongqing</city_now>  
+      <address>Nan An</address>  
+      <post>400065</post>  
+      <phone_work>1234567</phone_work>  
+      <phone_home>2222222</phone_home>  
+      <phone_mobi>3333333</phone_mobi>  
+      <email>42@163.com</email>  
+      <page>http://www.baidu.com</page> 
+    </person> 
+  </personList>  
+  <proExperienceList count="1"> 
+    <person ID="1" count="2"> 
+      <proExperience ID="1"> 
+        <start_year>2011</start_year>  
+        <start_month>09</start_month>  
+        <end_year>2013</end_year>  
+        <end_month>10</end_month>  
+        <name>B2C Mall</name>  
+        <tool>JavaEE</tool>  
+        <hw_env>PC</hw_env>  
+        <sw_env>Windows</sw_env>  
+        <description>B2C Web Mall System.</description>  
+        <duty>Web Designer</duty>  
+        <save>1</save> 
+      </proExperience>  
+      
+      <proExperience ID="2"> 
+        <start_year>2011</start_year>  
+        <start_month>09</start_month>  
+        <end_year>2013</end_year>  
+        <end_month>10</end_month>  
+        <name>B2C Mall 2</name>  
+        <tool>JavaEE</tool>  
+        <hw_env>PC</hw_env>  
+        <sw_env>Windows</sw_env>  
+        <description>B2C Web Mall System.</description>  
+        <duty>Web Designer</duty>  
+        <save>1</save> 
+      </proExperience>  
+    </person>
+    </proExperienceList>
+    
+    <msgList count="1">
+      <person ID="1">
+        <jobMsgList count="3">
+          <jobMsg ID="1">重庆邮电大学信科公司向您发出工作申请</jobMsg>
+          <jobMsg ID="2">微软亚洲研究院向您发出工作申请</jobMsg>
+          <jobMsg ID="3">谷歌中国拒绝了您的求职申请</jobMsg>
+        </jobMsgList>
+        
+        <hisMsgList count="4">
+          <hisMsg ID="1">简历1已经提交</hisMsg>
+          <hisMsg ID="2">简历2审核通过</hisMsg>
+          <hisMsg ID="3">简历3审核失败：原因未知</hisMsg>
+          <hisMsg ID="4">个人简历档案生成成功提醒</hisMsg>
+        </hisMsgList>
+        
+       <othMsgList count="1">
+         <othMsg ID="1">系统：欢迎您注册本站！</othMsg>
+        </othMsgList>
+      
+      </person>
+    
+    
+    </msgList> 
+    
+    <historyList count="1"> 
+    <person ID="1" count="5"> 
+      <history ID="1"> 
+         <name>我的简历1</name>
+         <update>2013-12-30</update>
+         <priv>1</priv>
+      </history>
+      
+      <history ID="2"> 
+         <name>我的简历2</name>
+         <update>2012-04-11</update>
+         <priv>2</priv>
+      </history> 
+      
+      <history ID="3"> 
+         <name>我的简历3</name>
+         <update>2011-04-11</update>
+         <priv>3</priv>
+      </history> 
+      
+      <history ID="4"> 
+         <name>我的简历4</name>
+         <update>2010-04-11</update>
+         <priv>3</priv>
+      </history> 
+      
+      <history ID="5"> 
+         <name>我的简历5</name>
+         <update>2009-04-11</update>
+         <priv>1</priv>
+      </history> 
+    </person> 
+  </historyList> 
+   
+  <certificateList count="1"> 
+    <person ID="1" count="3"> 
+      <certificate ID="1"> 
+        <cerName>cet4</cerName>  
+        <time>201402</time>  
+        <cerDescription>proDescription</cerDescription> 
+      </certificate>  
+      <certificate ID="2"> 
+        <cerName>cet6</cerName>  
+        <time>201402</time>  
+        <cerDescription>proDescription</cerDescription> 
+      </certificate>  
+      <certificate ID="3"> 
+        <cerName>cet8</cerName>  
+        <time>201402</time>  
+        <cerDescription>proDescription</cerDescription> 
+      </certificate> 
+    </person> 
+  </certificateList>  
+  <workRecommendList count="1"> 
+    <person ID="1" count="2"> 
+      <workRecommend ID="1"> 
+        <workAddress>chongqing</workAddress>  
+        <resumeType>soft</resumeType>  
+        <similarPosition>sofeTwo</similarPosition>  
+        <collectPosition>softt</collectPosition> 
+      </workRecommend>  
+      <workRecommend ID="2"> 
+        <workAddress>nanjing</workAddress>  
+        <resumeType>Test Engineering</resumeType>  
+        <similarPosition>C++ Tester</similarPosition>  
+        <collectPosition>Java Tester</collectPosition> 
+      </workRecommend> 
+    </person> 
+  </workRecommendList>  
+  <passwordList count="1"> 
+    <person ID="1"> 
+      <nowPwd>12345</nowPwd> 
+    </person> 
+  </passwordList> 
+</root>

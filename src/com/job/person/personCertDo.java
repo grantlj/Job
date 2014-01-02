@@ -62,7 +62,7 @@ public class personCertDo extends HttpServlet {
 	
 	private void getValues(String id)
 	{
-		doc=ReadXML.load("d:\\person.xml");
+		doc=ReadXML.load(getServletContext().getRealPath("/WEB-INF/classes/person.xml"));
 		Element root = doc.getRootElement();
 		Element certificateList=root.element("certificateList");
 		Element person=certificateList.elementByID(id);

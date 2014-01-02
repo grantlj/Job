@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>招聘信息发布</title>
+<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+<script language="javascript" type="text/javascript" src="../../js/My97DatePicker/WdatePicker.js"></script>
+<style type="text/css">
+@charset "utf-8";
+/*格式化标签*/
+body,div,p,h1,h2,h3,h4,span{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+/*本页面内的公共样式*/
+
+
+/*普通样式*/
+#post_a_job{
+	margin:0 auto;
+	padding:10px 15px;
+	width:960px;
+	border:1px solid #aaa;
+}
+#post_a_job h3{
+	margin:0 auto;
+	padding-bottom:5px;
+	border-bottom:1px solid #aaa;
+}
+#post_a_job b{
+	color:#F00;
+}
+#post_a_job tr td{
+	vertical-align:top;
+	padding:5px;
+}
+#post_a_job tr td table tr td{
+	margin:0;
+	padding:2px;
+}
+#post_a_job tr td span{
+	font-size:12px;
+}
+#post_a_job tr td .gray{
+	color:#999;
+}
+#post_a_job .jobNameSpan span{
+	font-size:12px;
+}
+#post_a_job textarea{
+	width:300px;
+	height:100px;
+}
+#post_a_job .edit{
+	width:300px;
+}
+#post_a_job .edit input{
+	float:left;
+}
+#post_a_job .edit span{
+	float:right;
+}
+#post_a_job table tr td .prompt{
+	font-size:10px;
+}
+#post_a_job table tr td .reset{
+	background:none;
+	border:0 none;
+	color:#09F;
+	cursor:pointer;
+}
+#job_property_button{
+	margin-top:10px;
+}
+#name,#phone{
+	color:#999;
+}
+#edit_contact{
+	background:none;
+	border:0 none;
+	color:#06F;
+}
+#edit_contact:hover{
+	cursor:pointer;
+}
+/*隐藏的div的样式*/
+/*职业类别*/
+#job_type{
+	width:800px;
+}
+#job_type p{
+	line-height:2em;
+}
+#job_type p .show{
+	color:#F33;
+}	
+#job_type p input{
+	float:right;
+	margin-left:15px;
+}
+#job_type table tr td{
+	margin:0;
+	padding:0;
+	border:0 none;
+	vertical-align:central;
+	font-weight:bold;
+	background-color:#999;
+}
+#job_type table .first{
+	width:200px;
+	text-align:center;
+	line-height:2.2em;
+}
+#job_type table .second{
+	width:600px;
+}
+#job_type ul li{
+	float:left;
+	margin-right:20px;
+	padding-top:10px;
+	font-weight:normal;
+	font-size:12px;
+	cursor:pointer;
+}
+#job_type ul li:hover{
+	color:#03F;
+}
+/*地区选择*/
+#area{
+	width:800px;
+}
+#area p{
+	line-height:2em;
+}
+#area p input{
+	float:right;
+	margin-left:15px;
+}
+#area table{
+	background-color:#DDD;
+	margin:5px 0 0 0;
+}
+#area table tr td{
+	width:120px;
+}
+</style>
+</head>
+<body>
+<div id="post_a_job">
+    <h3>描述这个职位</h3>
+    <form action=/job/views/enter/fabu method="post">
+    <table>
+    	<tr>
+        	<td align="right"><b>*</b>&nbsp;职业名称&nbsp;</td>
+            <td align="left" class="jobNameSpan">
+                <input type="text" name="jobName"/>&nbsp;
+                <span>
+                    <input type="checkbox" name="jobMH" />申请中高级职位&nbsp;
+                    <a href="#">点击查看中高级职位审核标准</a>
+                </span>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;职业类别&nbsp;</td>
+            <td align="left">
+            	<input type="button" value="请选择类别" id="job_type_button" />
+                <div id="job_type">
+                	<p>
+                    	您最多可以选择<b>2</b>个职位类别
+                        <input type="button" value="确定" />
+                        <input type="button" value="清空" class="clear_button" />
+                    </p>
+                    <p>你目前选择了：<span class="show"></span></p>
+                    <table>
+                    	<tr>
+                        	<td class="first">计算机互联网类</td>
+                            <td class="second">
+                            	<ul>
+                                	<li>计算机硬件</li>
+                                    <li>计算机软件</li>
+                                    <li>互联网/电子商务/网游</li>
+                                    <li>IT-管理</li>
+                                    <li>IT-品管/技术及其他</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td class="first">计算机互联网类</td>
+                            <td class="second">
+                            	<ul>
+                                	<li>计算机硬件</li>
+                                    <li>计算机软件</li>
+                                    <li>网游</li>
+                                    <li>IT-管理</li>
+                                    <li>IT-品管/技术及其他</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;岗位职责&nbsp;</td>
+            <td align="left">
+            	<textarea class="content1" name="zhize"></textarea>
+                <div class="edit">
+                	<input type="button" value="清除内容" class="reset reset1" />
+                    <span class="gray"><b class="word1">0</b>/4000</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;岗位要求&nbsp;</td>
+            <td align="left">
+            	<textarea class="content2" name = "yaoqiu"></textarea>
+                <div class="edit">
+                	<input type="button" value="清除内容" class="reset reset2" />
+                    <span class="gray"><b class="word2">0</b>/4000</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;招聘人数&nbsp;</td>
+            <td align="left"><input type="text" name="number"/>&nbsp;<span class="gray">0表示不限</span></td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;工作地点&nbsp;</td>
+            <td align="left">
+            	<input type="button" value="请选择地区" id="area_button" />
+                <div id="area">
+                	<p>
+                    	请选择地区：
+                        <select>
+                        	<option value="1">重庆</option>
+                        </select>
+                        <input type="button" value="确定" />
+                        <input type="button" value="清空" class="clear_button" />
+                    </p>
+                    <label><input type="checkbox" name="area" value="" />全重庆</label>
+                    <table>
+                    	<tr>
+                        	<td><label><input type="checkbox"  name="area" value=""/>渝中区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>渝北区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>九龙坡</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>沙坪坝</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>南岸区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>大渡口区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>江北区</label></td>
+                        </tr>
+                        <tr>
+                        	<td><label><input type="checkbox" name="area" value=""/>渝中区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>渝北区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>九龙坡</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>沙坪坝</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>南岸区</label></td>
+                            <td><label><input type="checkbox" name="area"  value=""/>大渡口区</label></td>
+                            <td><label><input type="checkbox" name="area" value=""/>江北区</label></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"><b>*</b>&nbsp;截止日期&nbsp;</td>
+            <td align="left"><input class="Wdate" type="text" onclick="WdatePicker()"></td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;工作年限&nbsp;</td>
+            <td align="left">
+            	<select name="time">
+                	<option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+        		</select>
+				年
+                <select name="time">
+                	<option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+        		</select>
+				个月
+            </td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;学历要求&nbsp;</td>
+            <td align="left">
+            	<select name="education">
+                    <option value="1">博士</option>
+                    <option value="2">硕士</option>
+                    <option value="3">本科</option>
+                    <option value="4">专科</option>
+                    <option value="5">高中</option>
+                    <option value="6">其他</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;工作性质&nbsp;</td>
+            <td align="left">
+            	<label><input type="radio" name="property"/>全职</label>
+                <label><input type="radio" name="property" />兼职</label>
+                <label><input type="radio" name="property" />实习</label>
+                <p><input type="button" value="点击展开更多填写项︾" id="job_property_button" /></p>
+                <div id="job_property" style="width:400px;height:100px;background-color:#666;"></div>
+            </td>
+        </tr>
+    </table>
+
+
+    <h3>酬薪福利</h3>
+    <table>
+    	<tr>
+        	<td align="right"><b>*</b>&nbsp;薪资待遇&nbsp;</td>
+            <td align="left">
+            	<input type="text" name="minMoney"/> ～
+                <input type="text" name="maxMoney"/>&nbsp;<span class="gray">元/月</span>&nbsp;
+                <input type="checkbox" name="Money" /><span>显示面议</span>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;福利待遇&nbsp;</td>
+            <td align="left">
+            	当前福利指数<b>6.0</b>
+            	<table>
+                    <tr>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                    </tr>
+                    <tr>
+                    	<td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                        <td><label><input type="checkbox" />养老保险</label></td>
+                    </tr>
+                </table>
+                <input type="text" />
+            </td>
+        </tr>
+    </table>
+
+
+    <h3>联系方式</h3>
+    <table>
+    	<tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;联系人&nbsp;</td>
+            <td align="left">
+            	<input type="text" value="甘先生" id="name" name="name"/>
+				<input type="button" id="edit_contact" value="我要修改联系方式" />
+            </td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;联系电话&nbsp;</td>
+            <td align="left"><input type="text" value="15323521363" id="phone" name="phone"/></td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;电子邮箱&nbsp;</td>
+            <td align="left">
+            	<input type="text" name="email"/>
+        		<input type="checkbox" /><span>该邮箱同时接收简历</span>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;转发&nbsp;</td>
+            <td align="left">
+            	<input type="text" />
+        		<p class="gray prompt">最多可以输入3个E-mail，用英文逗号（“,”）分隔</p>
+            </td>
+        </tr>
+    </table>
+
+    <h3>其他设置</h3>
+    <table>
+    	<tr>
+        	<td align="right"></td>
+            <td align="left"><input type="checkbox" /><span>使用自动回复</span></td>
+        </tr>
+    	<tr>
+        	<td align="right">&nbsp;&nbsp;&nbsp;回复内容&nbsp;</td>
+            <td align="left">
+            	<textarea class="content3" name="huiFu"></textarea>
+                <div class="edit">
+                	<input type="button" value="清除内容" class="reset reset3" />
+                    <span class="gray"><b class="word3">0</b>/4000</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        	<td align="right"></td>
+            <td align="left">
+            	<input type="button" value="预览"/>
+        		<input type="submit" value="发布" />
+            </td>
+        </tr>
+    </table>
+    </form>
+<!--post_a_job end-->
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	//页面载入时隐藏职业类别
+	$("#job_type").hide();
+	
+	//职业类别按钮监听
+	$("#job_type_button").click(function(){
+		$("#job_type").toggle();
+	});	
+	
+	//职业类别选择
+	$("#job_type ul li").click(function(){
+		var show=$("#job_type .show");
+		var showContent=show.html();
+		show.html(showContent+$(this).html()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	});
+	
+	//职业类别选择清空按钮
+	$("#job_type .clear_button").click(function(){
+		$("#job_type .show").html("");
+	});
+	
+	//页面载入时隐藏工作性质更多选项
+	$("#job_property").hide();
+	
+	//工作性质更多选项按钮按钮监听
+	$("#job_property_button").click(function(){
+		$("#job_property").toggle();
+	});	
+	
+	//岗位职责内容清除
+	$(".reset1").click(function(){
+		$(".content1").val("");
+		$(".word1").html("0");
+	});
+	
+	//岗位职责内容字数监听
+	$(".content1").bind('input propertychange',function(){
+		$(".word1").html($(this).val().length);
+	});	
+	
+	//岗位要求内容清除
+	$(".reset2").click(function(){
+		$(".content2").val("");
+		$(".word2").html("0");
+	});
+	//岗位要求内容字数监听
+	$(".content2").bind('input propertychange',function(){
+		$(".word2").html($(this).val().length);
+	});
+	
+	//回复内容清除
+	$(".reset3").click(function(){
+		$(".content3").val("");
+		$(".word3").html("0");
+	});
+	//回复内容字数监听
+	$(".content3").bind('input propertychange',function(){
+		$(".word3").html($(".content3").val().length);
+	});
+	
+	//页面载入时隐藏地区选择
+	$("#area").hide();
+	
+	//地区选择按钮监听
+	$("#area_button").click(function(){
+		$("#area").toggle();
+	});
+	
+	//地区选择清空按钮
+	$("#area .clear_button").click(function(){
+		$("#area input:checkbox").attr("checked",false);
+	});
+	
+	//页面载入时限定联系人和联系电话不能更改
+	$("#name").attr("disabled","disabled");
+	$("#phone").attr("disabled","disabled");
+	
+	//监听修改联系人和联系方式
+	$("#edit_contact").click(function(){
+		$("#edit_contact").hide();
+		$("#name,#phone").css({"color":"#000"});
+		$("#name,#phone").removeAttr("disabled");
+	});
+});
+</script>
+</html>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<person>
+<id>1</id>
+		<name>刘晓静</name>
+		<sex>女</sex>
+		<age>20</age>
+		<education>本科</education>
+		<job>电话销售</job>
+		<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+<id>2</id>
+		<name>曹伟</name>
+		<sex>男</sex>
+		<age>22</age>
+		<education>本科</education>
+		<job>厨师</job>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+<id>3</id>
+		<name>李立</name>
+		<sex>男</sex>
+		<age>19</age>
+		<education>高中</education>
+		<job>电话销售</job>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+<id>4</id>		
+<name>杨涛</name>
+		<sex>男</sex>
+		<age>26</age>
+		<education>本科</education>
+		<job>随意</job>
+		<tuijian>ture</tuijian>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+	</person>
+<person>
+		<name>翁越</name>
+<id>5</id>
+		<sex>男</sex>
+		<age>24</age>
+		<education>工作3~5年</education>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<job>网站运营</job>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+		<name>邓迎春</name>
+<id>6</id>
+		<sex>女</sex>
+		<age>30</age>
+		<education>工作3~5年</education>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<job>保洁</job>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+		<name>王玉屏</name>
+<id>7</id>
+		<sex>女</sex>
+		<age>22</age>
+		<education>本科</education>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<job>客服</job>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+		<name>刘旅</name>
+<id>8</id>
+		<sex>男</sex>
+		<age>24</age>
+		<education>高中</education>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<job>快递员</job>
+		<tuijian>ture</tuijian>
+	</person>
+<person>
+		<name>付丹丹</name>
+<id>9</id>
+		<sex>女</sex>
+		<age>24</age>
+		<education>本科</education>
+<type>A</type>
+		<grade>5</grade>
+		<gz>咨询</gz>
+		<job>导游</job>
+		<tuijian>ture</tuijian>
+	</person>
+
+
+
+</root>

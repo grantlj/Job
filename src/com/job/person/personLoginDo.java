@@ -62,7 +62,8 @@ public class personLoginDo extends HttpServlet {
 	private boolean checkValid(String u,String p)
 	{
 		System.out.println("in");
-		doc=ReadXML.load("d:\\person.xml");
+		doc=ReadXML.load(getServletContext().getRealPath("/WEB-INF/classes/person.xml"));
+		
 		Element root = doc.getRootElement();
 		Element personList=root.element("personList");
 		int personCount=Integer.parseInt((String)personList.attributeValue("count"));
@@ -104,12 +105,12 @@ public class personLoginDo extends HttpServlet {
        if (checkValid(username,userpwd))
        {
     	   request.getSession().setAttribute("loginUserId", userId);
-    	   response.sendRedirect("center.jsp");
+    	   response.sendRedirect("/Job/views/person/center.jsp");
     	   
        }
        
        else
-          response.sendRedirect("personLogin.jsp");
+          response.sendRedirect("/Job/views/person/personLogin.jsp");
 	   
 	}
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <enter> 
+    <name>重邮信科</name>  
+    <username>cqupt</username>  
+    <password>12345</password>  
+    <code>12484752</code>  
+    <img>../../images/enter/license.jpg</img>  
+    <profession>internet</profession>  
+    <character>å½è¥</character>  
+    <number>100</number>  
+    <produce>ä¿¡ç§</produce>  
+    <msg> 
+      <title>要期末了</title>  
+      <Context>下周二考试</Context>  
+      <time>2014-01-07</time> 
+    </msg>  
+    <msg> 
+      <title>复习</title>  
+      <Context>还没开始</Context>  
+      <time>2014-01-07</time> 
+    </msg>  
+    <msg> 
+      <title>预习</title>  
+      <Context>还没开始</Context>  
+      <time>2014-01-07</time> 
+    </msg> 
+  </enter> 
+</root>

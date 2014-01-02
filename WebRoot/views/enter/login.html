@@ -1,18 +1,13 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<HEAD><TITLE>登录</TITLE>
+<HEAD><TITLE>企业登录</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <SCRIPT language=JavaScript>
 <!--
 if (self != top) top.location.href = window.location.href
 //-->
 </SCRIPT>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content="text/html;" http-equiv=Content-Type>
 <style>
 a,div{
 	line-height:20px;
@@ -152,26 +147,20 @@ function check()
 //-->
 </SCRIPT>
 </HEAD>
-
-<%
-   if ((String)request.getSession().getAttribute("loginUserId")!=null)
-      response.sendRedirect("personMsgDo");
-   %>
-
 <BODY align="center" >
 		<div id="logo"></div>
         <div class="kuang">
         	
           <div id="biaodan">
-                <FORM method=post name="admininfo" action="personLoginDo">
+                <FORM method=post name="admininfo" action="enterlogin">
      
                      
                             
-                                    <div id="biaoti">个人登录</div><br><br><br>
+                                    <div id="biaoti">企业会员登录</div><br><br><br>
                                     
                                     <div>
-                                        <div class="text">用户名</div> 						<div><INPUT class="wenbenkuang" size=14 name="username"></div><br><br>
-                                        <div class="text">密 &nbsp;&nbsp;码</div>			<div><INPUT class="wenbenkuang" size=14 type="password" name="userpwd"></div><br><br>
+                                        <div class="text">用户名</div> 						<div><INPUT class="wenbenkuang" size=14 name="admin"></div><br><br>
+                                        <div class="text">密 &nbsp;&nbsp;码</div>			<div><INPUT class="wenbenkuang" size=14 type="password" name="password"></div><br><br>
                                         
                                     
                                         <div class="text">验证码</div>						<div><INPUT style="width:80px;" class="wenbenkuang"  maxLength=5 size=8 type="text" name="yzm"> </div>

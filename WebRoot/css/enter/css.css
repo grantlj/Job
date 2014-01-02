@@ -1,0 +1,110 @@
+/*标签格式化*/
+body,div,p,h1,h2,h3,h4,span{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+ul,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+/*公共样式*/
+.clear{
+	clear:both;
+	height:1px;
+	width:100%;
+}
+table tr td{
+	padding:2px 5px;
+}
+
+/*普通样式*/
+#search_talents{
+	width:800px;
+	margin:0 auto;
+}
+#search_talents h2{
+	text-align:center;
+	padding:15px 0;
+}
+#search_talents .one{
+	line-height:2em;
+}
+#search_talents .two{
+	margin-top:10px;
+}
+#search_talents .float_left{
+	float:left;
+}
+#search_talents .float_right{
+	float:right;
+}
+#search_talents .my{
+	float:left;
+	width:150px;
+	height:50px;
+	margin-right:15px;
+	font-size:24px;
+	font-weight:bold;
+}
+#search_talents .search_content{
+	padding-top:10px;
+}
+#search_talents .search_text{
+	width:200px;
+	height:30px;
+	font-size:22px;
+	line-height:1.5em;
+}
+#search_talents .search_button{
+	font-size:20px;
+	width:70px;
+	height:38px;
+}
+#search_talents .three{
+	margin-top:5px;
+	padding:10px 0 5px 10px;
+	background-color:#EEE;
+}
+#search_talents .left{
+	text-align:left;
+	padding-right:20px;
+	background-color:#EEE;
+}
+#search_talents .right{
+	text-align:right;
+	background-color:#999;
+}
+#search_talents .three .money{
+	width:60px;
+}
+#search_talents .three .look_up{
+	float:right;
+	width:50px;
+	height:30px;
+	margin-right:15px;
+}
+#search_talents h3{
+	text-align:center;
+	padding:15px 0;
+	background-color:#BBB;
+}
+#search_talents .result{
+	padding:10px;
+	border:1px solid #BBB;
+}
+#search_talents .result table{
+	display:inline;
+}
+#search_talents .result img{
+	float:left;
+	width:50px;
+	height:60px;
+	margin-right:10px;
+	overflow:hidden;
+	background-color:#096;
+}

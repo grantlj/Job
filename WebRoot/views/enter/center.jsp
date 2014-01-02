@@ -1,32 +1,29 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-	
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<meta http-equiv="Content-Type" content="text/html; " />
+<title>无标题文档</title>
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../css/reset_c.css"/>
 <link rel="stylesheet" type="text/css" href="../../css/base_c.css"/>
 <link rel="stylesheet" type="text/css" href="../../css/module_c.css"/>
 <link rel="stylesheet" type="text/css" href="../../css/layout_c.css"/>
 <link rel="stylesheet" type="text/css" href="../../css/center_c.css"/>
-<title>个人中心</title>
 </head>
 
 <body>
 <!--start			header部分			-->
 <div id="header">
 	<div id="logo">
-    	<img src="../../images/logo.png" alt="logo" />
+    	<a href="index.html" target="_self"><img src="../../images/logo.png" alt="logo" /></a>
     </div>
     <div class="topnav">
     	<a href="../../views/person/center.jsp" target="_blank">个人中心</a>
@@ -34,14 +31,13 @@
         <a href="#" target="_blank">管理中心</a>
     </div>
     <div class="topnav topnavRight"><a href="#" target="_blank">网站导航</a></div>
-    
 </div>
 <!--end			header部分			-->
 <div id="nav">
 	<div id="nav_container">
     	<div id="nav_home">
         	<img src="../../images/home.png" alt="icon_home" />
-        	<a href="../../index.jsp" target="_self">首页</a>
+        	<a href="../../index.html" target="_self">首页</a>
         </div>
         <div id="nav_menu">
         	<ul>
@@ -56,32 +52,30 @@
         </div>
     </div>
 </div>
-   <img src="../../images/subnav_icon.png" />
-   
+
 <div id="wrapper">
 	<div id="subnav">
     	<span></span>
-          <ul id="tt">  
-			 <a href="personMsgDo" target="iframepage"><li><img src="../../images/subnav_icon.png" />个人消息</li>
-						    	
-			 <a href="personCreditDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />个人能力信用查询</li>
-		     <a href="personCertDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />获得证书</li>
-			  <a href="personJobDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />工作查询</li>
-			 <a href="personJobRecommendDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />工作推荐查询</li>	
-						 
-			 <a href="personBasicInfoDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人基础资料</li>
-		      <a href="personHistoryDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人简历维护</li>
-			  <a href="personExpDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />项目经验</li>
-						      
-			   <a href="personChangePwdDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />修改密码</li> 			        
-						</ul>  
+        <ul>
+        	<a href=" password.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />密码修改</li></a>
+            <a href="sysInfo.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />消息查询</li></a>
+            <a href="enterData.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />企业基础资料</li></a>
+            <a href="fabu.html" target="iframepage"><li><img src="../../images/subnav_icon.png" />招聘信息发布</li></a>
+            <a href="conpetence.html" target="iframepage"><li><img src="../../images/subnav_icon.png" />人才能力分布表</li></a>
+            <a href="	talentSearch.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />人才推荐查询</li></a>
+            <a href="rencai.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />人才查询</li></a>
+            <a href="	talentSearch.html" target="iframepage"><li><img src="../../images/subnav_icon.png" />人才登记</li></a>
+            <a href="abilityAssess.jsp" target="iframepage"><li><img src="../../images/subnav_icon.png" />人才评价</li></a>
+        </ul>
     </div>
     <div id="content">
-    	<iframe name="iframepage" id="Iframe" scrolling="no" frameborder="0"  style="width:100%; height:100%" src="personMsgDo"></iframe>
+    	<span>消息查询</span>
+    	<iframe name="iframepage" id="Iframe" scrolling="no" frameborder="0"  style="width:100%; height:100%"></iframe>
     </div>
 </div>
 
 <!--start			footer部分			-->
+<hr style="height:4px; border:none; border-top:#135097 4px solid;" />
 <div id="footer">
 	<div id="link"></div>
     <div id="copyright"></div>
@@ -90,7 +84,7 @@
 
 
 <script type="text/javascript">
-
+	//var ifm = document.getElementById("Iframe").contentDocument.body.scrollHeight;
 	$("#Iframe").bind("load",function(event){
 				$("#Iframe").height(150);
 				var ifm= document.getElementById("Iframe"); 

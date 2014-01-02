@@ -15,207 +15,234 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>工作查询</title>
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/module.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/search.css"/>
+
+<style type="text/css">
+a {
+    text-decoration:none;
+}
+
+table tr td{
+    padding:2px 5px;
+}
+#search_work .left,#searchWorkResult .left{
+    text-align:left;
+    padding-right:20px;
+    background-color:#EEE;
+}
+#search_work .right,#searchWorkResult .right{
+    text-align:right;
+    background-color:#999;
+}
+#search_work div,#searchWorkResult div{
+    float:left;
+    text-align:center;padding-top:20px;
+    margin:0 auto;
+}
+#search_work,#searchWorkResult {
+    width:700px;
+    margin:0 auto;
+}
+
+#search_work .searchWorkShow,.searchWorkHide {
+    width: 100%;
+}
+.searchWorkHide {
+    display: none;
+    margin:0;
+    padding:0;
+    width:700px;
+    height:auto;
+}
+#search_work .doesSearch {
+    background:url(../../images/person/personJobSearch.gif) -2px -2px no-repeat;
+    width:52px;
+    height:25px;
+}
+#searchWFoot .slideUp a{
+background:url(../images/sligup.png) left center no-repeat;
+padding:6px 0 5px 22px;
+line-height:20px;
+}
+#searchWFoot .slideUp a .down{
+background:url(../images/sligdown.png) left center no-repeat;
+}
+#searchWFoot .slideUp{
+margin-top:15px;
+height:36px;
+}
+</style>
 <script>
 $(document).ready(function(){
-    var searchMore = 0;
-    $(".searchForm .slideUp").live('click','a',function() {
-        if (searchMore == 0){
-            $(this).text('收起').toggleClass('down');
-            searchMore++;
+    var searchNum = 0;
+    $(".searchWFoot .slideUp").live('click','a',function() {
+        if (searchNum == 0){
+            $(this).text("收起").toggleClass('down');
+            searchNum++;
         }else {
-            $(this).text('更多搜索条件').toggleClass('down');
-            searchMore--;
+            $(this).text('更多').toggleClass('down');
+            searchNum--;
         }
-        $("#moreoption").slideToggle('400');
-    });
-    $(".searchForm .keyword").live('click','.keyword-tab', function(event) {
-        $(this).addClass('current');
-        event.preventDefault();
+        $(".searchWorkHide").slideToggle('400');
     });
 });
-
-</script>
-<script type="text/javascript">
-
-function submitfrom() {
-    var keyword = $("#KeyWord_kw2").val();
-    if (keyword.length < 2) {
-    }
-    if (keyword === "请输入关键词,例如:JAVA,销售代表,行政助理等" || keyword === "请输入公司名称或关键词,例如:联想,华为等" || keyword === "请输入职位名称或关键词,例如:会计经理,开发工程师等") {
-        $("#KeyWord_kw2").val("");
-    }
-    var city = $("#JobLocation").val();
-    if (city === "选择城市" || city === "") {
-        alert("请选择城市！");
-        return false;
-    }
-    return true;
-}
-function formReset() {
-    document.getElementById("myFrom").reset();
-}
 </script>
 </head>
-
 <body>
-
-
-<div id="wrapper">
-    <div id="search-box">
-        <div class="Search-boxtop"></div>
-        <div class="search">
-            <div class="funSearch">
-                <div class="searchForm">
-                    <form id="myFrom" action="#" method="get" name="frmSearch">
-                        <div class="industry">
-                            <span>职位类别</span>
-                            <input id="buttonSelJobType" type="button" title="选择职位" value="选择职位" name="buttonSelJobType"/>
-                        </div>
-                        <div class="job">
-                            <span>行业类别</span>
-                            <input id="buttonSelIndustry" type="button" title="选择行业" value="选择行业" name="buttonSelIndustry">
-                        </div>
-                        <div class="time">
-                            <span>发布时间</span>
-                            <select id="Release-time">
-                                <option value="">所有时间</option>
-                                <option value="1">今天</option>
-                                <option value="3">最近三天</option>
-                                <option value="7">最近一周</option>
-                                <option value="30">最近一个月</option>
-                            </select>
-                        </div>
-                        <div class="keyword">
-                            <span class="keyword-tab">
-                                <a class="current" href="#">全文</a>
-                                <a href="#">公司名</a>
-                                <a href="#">职位名</a>
-                            </span>
-                            <!--span class="ui-helper-hidden-accessible" role="status" aria-live="polite"></span-->
-                            <input id="KeyWord_kw2" class="ui-autocomplete-input" type="text" autocomplete="off" value="请输入关键词,例如:JAVA,销售代表,行政助理等" iskeyword="1" ktype="0" submitform="1" xhrstyle="k" sjmodule="AutoComplete" maxlength="100" name="KeyWord">
-                        </div>
-                        <div class="city2">
-                            <span>工作地点</span>
-                            <!--span class="ui-helper-hidden-accessible" role="status" aria-live="polite"></span-->
-                            <input id="JobLocation" class="ui-autocomplete-input" type="text" autocomplete="off" value="选择城市" name="JobLocation" title="北京">
-                            <input id="buttonSelCity" class="search-citybtn" type="button" name="buttonSelCity">
-                        </div>
-                        <div class="hot-keyword">
-                            <em>热门关键字：</em>
-                            <a href="#')">java</a>|
-                            <a href="#')">.net</a>|
-                            <a href="#')">PHP</a>|
-                            <a href="#')">Android</a>|
-                            <a href="#')">财务</a>|
-                            <a href="#')">测试</a>|
-                            <a href="#')">销售</a>|
-                            <a href="#')">翻译</a>|
-                            <a href="#')">广告</a>|
-                            <a href="#')">客服</a>|
-                            <a href="#')">人力资源</a>|
-                            <a href="#')">设计</a>
-                        </div>
-                        <div id="moreoption" style="display: none;">
-                            <div class="workingtime">
-                                <span>工作经验</span>
-                                <input id="buttonSelWorkingTime" type="button" title="不限" value="不限" name="buttonSelWorkingTime">
-                            </div>
-                            <div class="degree">
-                                <span>学历要求</span>
-                                <input id="buttonSelDegree" type="button" title="不限" value="不限" name="buttonSelDegree">
-                            </div>
-                            <div class="Salary-range">
-                                <span>月薪范围</span>
-                                <select name="SchSalaryFromAdv">
-                                    <option value="0">0</option>
-                                    <option value="1000">1000</option>
-                                    <option value="1500">1500</option>
-                                    <option value="2000">2000</option>
-                                    <option value="3000">3000</option>
-                                    <option value="4000">4000</option>
-                                    <option value="5000">5000</option>
-                                    <option value="6000">6000</option>
-                                    <option value="8000">8000</option>
-                                    <option value="10000">10000</option>
-                                    <option value="15000">15000</option>
-                                    <option value="20000">20000</option>
-                                    <option value="30000">30000</option>
-                                    <option value="50000">50000</option>
-                                </select>
-                                 到 
-                                <select name="SchSalaryToAdv">
-                                    <option value="">－不限－</option>
-                                    <option value="1000">1000</option>
-                                    <option value="1500">1500</option>
-                                    <option value="2000">2000</option>
-                                    <option value="3000">3000</option>
-                                    <option value="4000">4000</option>
-                                    <option value="5000">5000</option>
-                                    <option value="6000">6000</option>
-                                    <option value="8000">8000</option>
-                                    <option value="10000">10000</option>
-                                    <option value="15000">15000</option>
-                                    <option value="20000">20000</option>
-                                    <option value="30000">30000</option>
-                                    <option value="50000">50000</option>
-                                </select>
-                                (人民币)
-                            </div>
-                            <div class="comptype">
-                                <span>公司性质</span>
-                                <input id="buttonSelComptype" type="button" title="不限" value="不限" name="buttonSelComptype">
-                            </div>
-                            <div class="compsize">
-                                <span>公司规模</span>
-                                <input id="buttonSelCompsize" type="button" title="不限" value="不限" name="buttonSelCompsize">
-                            </div>
-                            <div class="job-category">
-                                <span>职位类型</span>
-                                <label class="category">
-                                    <input type="checkbox" checked="" value="2" name="EmplType">
-                                    全职
-                                </label>
-                                <label class="category">
-                                    <input type="checkbox" checked="" value="1" name="EmplType">
-                                    兼职
-                                </label>
-                                <label class="category">
-                                    <input type="checkbox" checked="" value="4" name="EmplType">
-                                    实习
-                                </label>
-                            </div>
-                        </div>
-                        <div class="returnback">
-                            <a id="reset" href="javascript:void(0)" onclick="formReset()">重置</a>
-                        </div>
-                        <div class="slideUp">
-                            <a class='down' href="javascript:void(0)">更多搜索条件</a>
-                            <!--a class='up' href="javascript:void(0)">收起</a-->
-                        </div>
-                        <div class="searchbtn">
-                            <button class="doesSearch" onclick="return submitfrom();" type="submit"> </button>
-                            <a href="#">地图搜索></a>
-                        </div>
-                        <dl class="clearFix"> </dl>
-                    </form>
-                </div>
-            </div>
+<div id="search_work">
+    <div class="searchWorkShow">
+    	<table>
+        	<tr>
+            	<td class="right">职位类别：</td>
+                <td class="left">
+                	<select>
+                    	<option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right">行业类别：</td>
+                <td class="left">
+                	<select>
+                    	<option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right">发布时间：</td>
+                <td class="left">
+                    <select>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<td class="right">关键字：</td>
+                <td class="left" colspan="3">
+                	<input type="text" class="workKeyword" size="40px"/>
+                </td>
+                <td class="right">工作地点：</td>
+                <td class="left">
+                	<select>
+                    	<option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+            </tr>
+        </table>    
+    </div>
+    <div class="searchWorkHide">    
+        <table>
+            <tr>
+                <td class="right">工作经验：</td>
+                <td class="left">
+                    <select>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right">学历要求：</td>
+                <td class="left">
+                    <select>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right">月薪范围：</td>
+                <td class="left">>=<input type="text" class="money" size="6px"/>元</td>
+            </tr>
+            <tr>
+                <td class="right">公司性质：</td>
+                <td class="left">
+                    <select>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right">公司规模：</td>
+                <td class="left">
+                    <select>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                        <option>java程序员</option>
+                    </select>
+                </td>
+                <td class="right" colspan="2">
+                <div class="job-category">
+                    <label class="category">
+                    <input type="checkbox" checked="" value="2" name="EmplType">
+                     全职
+                    </label>
+                    <label class="category">
+                    <input type="checkbox" checked="" value="1" name="EmplType">
+                    兼职
+                    </label>
+                    <label class="category">
+                    <input type="checkbox" checked="" value="4" name="EmplType">
+                    实习
+                    </label>
+                    </div>
+                </td>            
+            </tr>
+        </table>
+    </div>
+    <div style="width: 90%"><hr/></div>
+    <div class="searchWFoot">
+        <div class="slideUp">
+            <a class='down' href="javascript:void(0)">更多</a>
+            <!--a class='up' href="javascript:void(0)">收起</a-->
         </div>
-        <div class="Search-boxbottom"></div>
+        <div style="width:280px"></div>
+        <div>    
+            <button class="doesSearch" type="submit"> </button>
+            <a href="#">地图搜索></a>
+        </div>
     </div>
 </div>
-
-
-<!--start           footer部分            -->
-<div id="footer">
-    <div id="link"></div>
-    <div id="copyright"></div>
+<div id="searchWorkResult">     
+    <div style="width: 100%;text-align: center;background-color:#999"><h3>查询结果</h3></div> 
+    <!--以下这个div为查询结果，由jsp标签循环生成-->
+    <div class="result" style="width: 100%">
+        <table>
+             <tr>
+                <td class="right">职位类别：</td>
+                <td class="left">测试测试</td>
+                <td class="right">行业类别：</td>
+                <td class="left">测试测试</td>
+                <td class="right">发布时间：</td>
+                <td class="left">测试测试</td>
+            </tr>
+            <tr>
+                <td class="right">工作经验：</td>
+                <td class="left">测试测试</td>
+                <td class="right">学历要求：</td>
+                <td class="left">测试测试</td>
+                <td class="right">工作地点：</td>
+                <td class="left">测试测试</td>
+            </tr>
+            <tr>
+                <td class="right">公司性质：</td>
+                <td class="left">测试测试</td>
+                <td class="right">公司规模：</td>
+                <td class="left">测试测试</td>
+                <td class="right">职位类型：</td>
+                <td class="left">测试测试</td>
+            </tr>
+        </table>
+    </div>
 </div>
-<!--end         footer部分            -->
 </body>
 </html>

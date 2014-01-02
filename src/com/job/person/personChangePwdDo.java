@@ -64,7 +64,7 @@ public class personChangePwdDo extends HttpServlet {
 		if (id != null) {
 			
 		
-			doc = ReadXML.load("d:\\person.xml");
+			doc = ReadXML.load(getServletContext().getRealPath("/WEB-INF/classes/person.xml"));
 			Element root = doc.getRootElement();
 			Element passwordList = root.element("passwordList");
 			Element person = passwordList.elementByID(id);
