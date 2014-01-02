@@ -14,11 +14,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/module.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-<link rel="stylesheet" type="text/css" href="../../css/center.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/reset_c.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/base_c.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/module_c.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/layout_c.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/center_c.css"/>
 <title>个人中心</title>
 </head>
 
