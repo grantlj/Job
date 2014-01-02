@@ -1,0 +1,97 @@
+﻿
+/**start			header样式				**/
+#header {
+	height:68px;
+	width:1000px;
+	margin:0 auto;
+}
+#header div{
+	float:left;
+}
+#topnav {
+	position:relative;
+	left:560px;
+	top:10px;
+}
+#topnav a,#topnav a:visited {
+	color:#014979;
+	float:left;
+	display:block;
+	margin:0 5px;
+	font-family:微软雅黑;
+	font-size:12px;
+	text-decoration:none;
+}
+#topnav a:hover {
+	text-decoration:underline;
+}
+/**end			header样式				**/
+
+
+
+/**start			nav样式				**/
+#nav{
+	height:32px;
+	width:auto;
+	background:url(../../images/nav_bg.png);
+	font-family:微软雅黑;
+	font-size:12px;
+}
+#nav a{
+	text-decoration:none;
+	color:#fff;
+}
+#nav a:hover {
+	color:#FF6600;
+}
+#nav_container {
+	width:1000px;
+	margin:0 auto;
+	height:inherit;
+}
+#nav_container div, #nav ul, #nav li {
+	height:inherit;
+	float:left;
+	line-height:32px;
+}
+#nav_home {
+	width:485px;
+}
+#nav_home img{
+	float:left;
+	position:relative;
+	top:6px;
+	display:block;
+}
+#nav_home a{
+	margin-left:40px;
+}
+
+.nav_menu{
+	width:86px;
+}
+/**end			nav样式				**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
