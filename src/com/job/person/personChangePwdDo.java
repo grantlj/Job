@@ -84,7 +84,7 @@ public class personChangePwdDo extends HttpServlet {
 				// 设置输出编码
 				format.setEncoding("UTF-8");
 				// 创建需要写入的File对象
-				File file = new File("d:\\person.xml");
+				File file = new File(getServletContext().getRealPath("/WEB-INF/classes/person.xml"));
 				// 生成XMLWriter对象，构造函数中的参数为需要输出的文件流和格式
 
 				XMLWriter writer;
