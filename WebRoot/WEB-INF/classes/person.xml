@@ -40,7 +40,6 @@
         <duty>Web Designer</duty>  
         <save>1</save> 
       </proExperience>  
-      
       <proExperience ID="2"> 
         <start_year>2011</start_year>  
         <start_month>09</start_month>  
@@ -53,68 +52,55 @@
         <description>B2C Web Mall System.</description>  
         <duty>Web Designer</duty>  
         <save>1</save> 
-      </proExperience>  
-    </person>
-    </proExperienceList>
-    
-    <msgList count="1">
-      <person ID="1">
-        <jobMsgList count="3">
-          <jobMsg ID="1">重庆邮电大学信科公司向您发出工作申请</jobMsg>
-          <jobMsg ID="2">微软亚洲研究院向您发出工作申请</jobMsg>
-          <jobMsg ID="3">谷歌中国拒绝了您的求职申请</jobMsg>
-        </jobMsgList>
-        
-        <hisMsgList count="4">
-          <hisMsg ID="1">简历1已经提交</hisMsg>
-          <hisMsg ID="2">简历2审核通过</hisMsg>
-          <hisMsg ID="3">简历3审核失败：原因未知</hisMsg>
-          <hisMsg ID="4">个人简历档案生成成功提醒</hisMsg>
-        </hisMsgList>
-        
-       <othMsgList count="1">
-         <othMsg ID="1">系统：欢迎您注册本站！</othMsg>
-        </othMsgList>
-      
-      </person>
-    
-    
-    </msgList> 
-    
-    <historyList count="1"> 
+      </proExperience> 
+    </person> 
+  </proExperienceList>  
+  <msgList count="1"> 
+    <person ID="1"> 
+      <jobMsgList count="3"> 
+        <jobMsg ID="1">重庆邮电大学信科公司向您发出工作申请</jobMsg>  
+        <jobMsg ID="2">微软亚洲研究院向您发出工作申请</jobMsg>  
+        <jobMsg ID="3">谷歌中国拒绝了您的求职申请</jobMsg> 
+      </jobMsgList>  
+      <hisMsgList count="1"> 
+        <hisMsg ID="1">2014-01-05 13:37:03 ：简历修改成功！</hisMsg> 
+      </hisMsgList>  
+      <othMsgList count="3"> 
+        <othMsg ID="1">系统：欢迎您注册本站！</othMsg>  
+        <hisMsg ID="2">2014-01-05 13:52:10 ：账户密码修改成功！</hisMsg>  
+        <hisMsg ID="3">2014-01-05 13:52:35 ：账户密码修改成功！</hisMsg>
+      </othMsgList> 
+    </person> 
+  </msgList>  
+  <historyList count="1"> 
     <person ID="1" count="5"> 
       <history ID="1"> 
-         <name>我的简历1</name>
-         <update>2013-12-30</update>
-         <priv>1</priv>
-      </history>
-      
+        <name>我的简历1</name>  
+        <update>2013-12-30</update>  
+        <priv>1</priv> 
+      </history>  
       <history ID="2"> 
-         <name>我的简历2</name>
-         <update>2012-04-11</update>
-         <priv>2</priv>
-      </history> 
-      
+        <name>我的简历2</name>  
+        <update>2012-04-11</update>  
+        <priv>2</priv> 
+      </history>  
       <history ID="3"> 
-         <name>我的简历3</name>
-         <update>2011-04-11</update>
-         <priv>3</priv>
-      </history> 
-      
+        <name>我的简历3</name>  
+        <update>2011-04-11</update>  
+        <priv>3</priv> 
+      </history>  
       <history ID="4"> 
-         <name>我的简历4</name>
-         <update>2010-04-11</update>
-         <priv>3</priv>
-      </history> 
-      
+        <name>我的简历4</name>  
+        <update>2010-04-11</update>  
+        <priv>3</priv> 
+      </history>  
       <history ID="5"> 
-         <name>我的简历5</name>
-         <update>2009-04-11</update>
-         <priv>1</priv>
+        <name>我的简历5</name>  
+        <update>2009-04-11</update>  
+        <priv>1</priv> 
       </history> 
     </person> 
-  </historyList> 
-   
+  </historyList>  
   <certificateList count="1"> 
     <person ID="1" count="3"> 
       <certificate ID="1"> 
@@ -150,6 +136,36 @@
       </workRecommend> 
     </person> 
   </workRecommendList>  
+  <resumeList count="1"> 
+    <person ID="1"> 
+      <type>2</type>  
+      <!-- 1 to 7 -->  
+      <abilityClass>3</abilityClass>  
+      <!-- 1 to 5 -->  
+      <creditClass>2</creditClass>  
+      <!-- 1 to 5 -->  
+      <salaryClass>5</salaryClass>  
+      <!-- 1 to 5 -->  
+      <eduClass>5</eduClass>  
+      <!-- 1 to 6 -->  
+      <worktimeClass>3</worktimeClass>  
+      <!-- 1 to 4 -->  
+      <projClass>3</projClass>  
+      <!-- 1 to 4 -->  
+      <generalSkill>00001101</generalSkill>  
+      <!-- 1 to 5 -->  
+      <artSkill>00000110</artSkill>  
+      <!-- 1 to 4 -->  
+      <progSkill_fore>00000111</progSkill_fore>  
+      <!-- 1 to 4 -->  
+      <progSkill_back>00010011</progSkill_back>  
+      <!-- 1 to 5 -->  
+      <dbSkill>00001111</dbSkill>  
+      <!-- 1 to 4-->  
+      <mgrSkill>00000011</mgrSkill>  
+      <!-- 1 to 2 --> 
+    </person> 
+  </resumeList>  
   <passwordList count="1"> 
     <person ID="1"> 
       <nowPwd>12345</nowPwd> 

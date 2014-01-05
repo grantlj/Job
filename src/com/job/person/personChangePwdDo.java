@@ -3,6 +3,8 @@
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 import javax.servlet.ServletException;
@@ -80,13 +82,28 @@ public class personChangePwdDo extends HttpServlet {
 			} else {
 				String newPass = request.getParameter("newPassword");
 				person.element("nowPwd").setText(newPass);
+				
+				
+				Element msgList=root.element("msgList");
+			    person=msgList.elementByID(id);
+			    Element othMsgList=person.element("othMsgList");
+			    
+			    othMsgList.addAttribute("count",String.valueOf(Integer.parseInt(othMsgList.attributeValue("count"))+1));
+				Element othMsg=othMsgList.addElement("hisMsg");
+				othMsg.addAttribute("ID",String.valueOf(Integer.parseInt(othMsgList.attributeValue("count"))));
+				
+				SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd  kk:mm:ss ");Date d = new Date();
+				othMsg.setText(sdf.format(d)+"：账户密码修改成功！");
+				
+				
+				
 				OutputFormat format = OutputFormat.createPrettyPrint();
 				// 设置输出编码
 				format.setEncoding("UTF-8");
 				// 创建需要写入的File对象
 				File file = new File(getServletContext().getRealPath("/WEB-INF/classes/person.xml"));
 				// 生成XMLWriter对象，构造函数中的参数为需要输出的文件流和格式
-
+ 
 				XMLWriter writer;
 
 				writer = new XMLWriter(new FileOutputStream(file), format);

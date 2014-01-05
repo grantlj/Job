@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>个人简历管理</title>
 <style type="text/css">
 *{ margin:0px; padding:0px; list-style:none; font-size:12px;}
 #wrapper{ width:770px; margin:0 auto;}

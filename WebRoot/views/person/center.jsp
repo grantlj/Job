@@ -70,7 +70,7 @@
 			 <a href="personJobRecommendDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />工作推荐查询</li>	
 						 
 			 <a href="personBasicInfoDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人基础资料</li>
-		      <a href="personHistoryDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人简历维护</li>
+		      <a href="personResumeDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />个人简历维护</li>
 			  <a href="personExpDo" target="iframepage"><li>  <img src="../../images/subnav_icon.png" />项目经验</li>
 						      
 			   <a href="personChangePwdDo" target="iframepage"> <li>  <img src="../../images/subnav_icon.png" />修改密码</li> 			        

@@ -182,7 +182,7 @@ function check()
                                         
                                         
                                         <a  style=" margin-left:30px;margin-right:30px;"href="">忘记密码？</a>
-                                        <a href="">免费注册</a>
+                                        <a href="personSignup.jsp" target="_blank">免费注册</a>
                                     </div>
                             
                             
